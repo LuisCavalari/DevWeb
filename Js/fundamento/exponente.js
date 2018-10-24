@@ -6,12 +6,12 @@
  * posteriormente será criado uma função com um método para tal 
 */
 
-let num = 10
-const exp = 6
+let num = 2
+const exp = 3
 let res = 1
 let cont =0
 while (cont<exp) {
     res*=num 
     cont++
 }
-console.log(res.toExponential(10))
+console.log(res)
