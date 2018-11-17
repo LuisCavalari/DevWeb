@@ -1,7 +1,7 @@
 const valor = "Global"
 
 function ja(){
-    console.log(valor)
+    console.log(this.valor)
 }
 
 function x(){
