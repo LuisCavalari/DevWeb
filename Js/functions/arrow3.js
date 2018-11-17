@@ -13,3 +13,4 @@ console.log()
 comparaComThis = (param)=>{
     console.log(this === param)
 }
+
