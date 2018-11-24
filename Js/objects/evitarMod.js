@@ -13,3 +13,4 @@ const pessoa = {
 Object.seal(pessoa)// não da pra excluir nem add, apenas modificar os valores
 
 console.log('Selado:',Object.isSealed(pessoa))
+Object.freeze(pessoa)//não da pra fazer nada 
