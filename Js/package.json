@@ -1,0 +1,19 @@
+{
+  "name": "aula_node",
+  "version": "1.0.0",
+  "description": "muito legal",
+  "main": "Node.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "djakda"
+  ],
+  "author": "Luis Felipe Cavalari",
+  "license": "ISC"
+}
