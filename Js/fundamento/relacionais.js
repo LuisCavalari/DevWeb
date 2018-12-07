@@ -5,4 +5,4 @@ console.log('03','3'!==3)
 
 const d1 = new Date()
 
-console.log(d1.getDate(),d1.,d1.getFullYear())
+console.log(d1.getDate(),d1.getDay(),d1.getFullYear())
