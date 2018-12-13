@@ -1,0 +1,51 @@
+<h1>Project</h1>
+<script>
+    function mudarEstado(el){
+        document.querySelectorAll('.pasta')
+        .forEach(pasta =>{
+            pasta.onclick = e =>{
+                debugger
+                const ul = pasta.nextElementSibling
+                const d = ul.style.display
+                ul.style.display = d === 'none' ? 'block' :'none'
+            } 
+        })
+        
+    }
+</script>
+<ul class="tree">
+    <li class="pasta" >Backend</li>
+        <ul>
+            <li class="pasta">App
+                <ul>
+                    <li>Produto.js</li>
+                    <li>usuario.js</li>
+
+                </ul>
+            </li>
+            <li class="pasta">Config
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidos.js</li>
+                </ul>
+
+            </li>
+        </ul>
+        <li class="pasta">Front end
+            <ul>
+                <li class="pasta">Public
+                    <ul>
+                        <li>app.js </li>
+                        <li>app.css</li>
+                        <li>index.html</li>
+                    </ul>
+
+                </li>
+            </ul>
+
+        </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
