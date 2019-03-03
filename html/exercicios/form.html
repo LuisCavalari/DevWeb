@@ -1,0 +1,46 @@
+<form action="http://localhost:3003/usuarios" method="POST">
+    <input type="text" name="nome">
+    <input type="password" name="senha">
+    <textarea name="desc"cols="30" rows="10"></textarea>
+
+    <div>
+        <input type="radio" name="tipo" value="admin" >Admin
+        <input type="radio" name="tipo"value="Regular">Regular
+        <input type="radio" name="tipo" value="professor">professor
+
+    </div>
+   
+
+    <div>
+        <input type="checkbox" name="ativo" value="true">Ativo
+    </div>
+    <select name="estado" >
+        <option value="parana">Parana</option>
+        <option value="minas gerais">Minas gerais</option>
+
+    </select>
+
+    <select name="interesses" multiple size="5">
+        <option value="">a</option>
+        <option value="">a</option>
+        <option value="">a<a/option>
+        <option value="">a</option>
+        <option value="">a</option>
+
+
+    </select>
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+</form>
+<style>
+    input,textarea{
+        display: block;
+        margin-bottom: 10px;
+
+    }input[type=radio],input[type=checkbox]{
+        display: inline
+    }select{
+        display: block;
+    }
+
+</style>

@@ -1,30 +1,16 @@
 <h1>Project</h1>
-<script>
-    function mudarEstado(el){
-        document.querySelectorAll('.pasta')
-        .forEach(pasta =>{
-            pasta.onclick = e =>{
-                debugger
-                const ul = pasta.nextElementSibling
-                const d = ul.style.display
-                ul.style.display = d === 'none' ? 'block' :'none'
-            } 
-        })
-        
-    }
-</script>
+
 <ul class="tree">
-    <li class="pasta" >Backend</li>
+    <li class="pasta" wb-folder >Backend</li>
         <ul>
-            <li class="pasta">App
+            <li><span wb-folder>app</span> 
                 <ul>
                     <li>Produto.js</li>
                     <li>usuario.js</li>
 
                 </ul>
             </li>
-            <li class="pasta">Config
-                <ul>
+            <li> <span wb-folder>config</span>                <ul>
                     <li>banco.js</li>
                     <li>rotas.js</li>
                     <li>servidos.js</li>
@@ -32,9 +18,9 @@
 
             </li>
         </ul>
-        <li class="pasta">Front end
+        <li class="pasta" wb-folder>Front end
             <ul>
-                <li class="pasta">Public
+                <li class="pasta" wb-folder>Public
                     <ul>
                         <li>app.js </li>
                         <li>app.css</li>
@@ -48,4 +34,17 @@
 </ul>
 
 <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+   
+        document.querySelectorAll('[wb-folder]')
+        .forEach(pasta =>{
+            pasta.onclick = e =>{
+                console.log('entrou')
+                const ul = pasta.nextElementSibling
+                const d = ul.style.display
+                ul.style.display = d === 'none' ? 'block' :'none'
+            } 
+        })
+        
 
+</script>

@@ -1,0 +1,31 @@
+
+<div wm-slider>
+        <p><img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da cidade" title="Muro da cidade"
+            width="513" height="342"></p>
+        <p><img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="" height="342"></p>
+        <p class="circular"><img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="" height="342"></p>
+        <p class="texto"><img src="http://files.cod3r.com.br/curso-web/avatar.jpg" height="50" align ="left">adjdskdjkajdkajdkajdkajdkadjkajdkajdkajdkajdkajdkajdkajkadadadadadadada
+        </p>
+</div>
+<style>
+    p{
+        position: absolute;
+        display: none;
+    }
+
+</style>
+
+<script>
+    function mover(ele,inicio,fim,passo){
+        const novoIncio =  inicio -passo
+        if(novoIncio >=fim){
+            ele.style.left = novoIncio + "px"
+            setTimeout(()=>mover(ele,novoInicio,fim,passo),7)
+        }
+    }
+    const element = document.querySelector('[wm-slider] > p')
+    element.style.display = 'block'
+    mover(element,1500,-400,5)
+
+
+</script>

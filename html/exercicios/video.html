@@ -1,0 +1,56 @@
+<video id="meuVideo" width="800" height="450"   >
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+
+</video>
+<div class="progresso" wm-progresso="meuVideo">
+    <div>
+
+    </div>
+</div>
+
+<div>
+    <button wm-play="meuVideo" onclick="Iniciar()">Iniciar</button>
+</div>
+<div>
+    <button wm-pause="meuVideo" onclick="pausar()">pausar</button>
+</div>
+
+<style>
+    .progresso{
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+
+    }.progresso > div{
+        background-color: red;
+        height:100%;
+        text-align: right;
+        font-size: 14px;
+        width: 30%;
+    }
+
+</style>
+<script>
+    const video = document.getElementById('meuVideo')
+    function pausar() {
+        console.log('entrou')
+        video.pause()
+    }
+
+    function Iniciar() {
+        console.log('entrou')
+        video.play()
+    }function calDuration(){
+        let tempAssistido = video.currentTime
+        let tempTotal = video.duration
+        let porcent = (tempAssistido*100)/tempTotal
+        const prgBar =  document.querySelector('.progresso > div')
+        prgBar.style.width = `${porcent}%`
+    }
+    
+        setInterval(()=> calDuration(),1)
+    
+    
+
+
+</script>
